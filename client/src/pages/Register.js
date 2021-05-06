@@ -8,7 +8,7 @@ import Icon from '@material-ui/core/Icon';
 
 const useStyles = makeStyles({
 container:{
-   height:'97vh'
+   height:'94vh'
 },
 register:{
 },
@@ -27,6 +27,9 @@ btn:{
 icon:{
     color:'#fff',
     fontSize:'250px'
+},
+footer:{
+    padding:'10px 0'
 }
 })
 
@@ -49,7 +52,7 @@ export default function Register() {
             </Grid>
             </Grid>
             </Grid>
-            <Grid className={classes.footer}  item>FOOTER</Grid>
+            <Grid className={classes.footer} container justify='center' alignItems='center' className={classes.footer}  item>Created by iCodeCat</Grid>
        </container>
     )
 }

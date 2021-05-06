@@ -4,6 +4,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 
 import Register from './pages/Register';
+import RegisterPopup from './components/RegisterPopup';
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -21,11 +22,15 @@ function App() {
         <ThemeProvider theme={theme}>
 
     <BrowserRouter>
-      <Switch>
+        <Switch>
         <Route exact path="/register">
           <Register />
         </Route>
-      </Switch>
+        {/* Registeration popup */}
+        <Route path="/register/flow">
+          <RegisterPopup/>
+        </Route>
+        </Switch>
     </BrowserRouter>
     </ThemeProvider>
     </div>
