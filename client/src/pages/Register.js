@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import {useHistory} from 'react-router-dom';
 import Icon from '@material-ui/core/Icon';
 
 
@@ -35,6 +36,7 @@ footer:{
 
 export default function Register() {
     const classes = useStyles();
+    const history = useHistory();
     return (
        <container >
             <Grid className={classes.container} container>
@@ -45,10 +47,10 @@ export default function Register() {
             </Grid>
             <Grid container spacing={2} direction='column' justify='center' alignItems='center' className={classes.register} xs={12} md={5} item>
             <Grid item>
-            <Button className={classes.btn} color='primary' variant='contained'>SIGN UP</Button>
+            <Button onClick={()=>history.push('register/flow')} className={classes.btn} color='primary' variant='contained'>SIGN UP</Button>
             </Grid>
             <Grid item>
-            <Button className={classes.btn} color='primary' variant='outlined'>LOG IN</Button>
+            <Button onClick={()=>history.push('login')} className={classes.btn} color='primary' variant='outlined'>LOG IN</Button>
             </Grid>
             </Grid>
             </Grid>

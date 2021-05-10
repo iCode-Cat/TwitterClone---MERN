@@ -5,6 +5,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 import Register from './pages/Register';
 import RegisterPopup from './components/RegisterPopup';
+import Signin from './pages/Signin';
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -29,6 +30,9 @@ function App() {
         {/* Registeration popup */}
         <Route path="/register/flow">
           <RegisterPopup/>
+        </Route>
+        <Route path="/login">
+          <Signin/>
         </Route>
         </Switch>
     </BrowserRouter>

@@ -41,7 +41,7 @@ twitter:{
 }
   }));
 
-function RegisterPopup() {
+function Signin() {
     const history = useHistory();
     const classes = useStyles();
     return (
@@ -49,12 +49,11 @@ function RegisterPopup() {
             <form className={classes.form}>
             <TwitterIcon className={classes.twitter}  fontSize='large'/>
             <TextField className={classes.textField} id="username" label="Username" variant="outlined" />
-            <TextField className={classes.textField} id="email" label="Email" variant="outlined" />
             <TextField className={classes.textField} id="password" label="Password" variant="outlined" />
-            <Button className={classes.btn} color='primary' variant='contained'>SIGN UP</Button>
+            <Button className={classes.btn} color='primary' variant='outlined'>LOGIN</Button>
             </form>
         </Grid>
     )
 }
 
-export default RegisterPopup
+export default Signin
