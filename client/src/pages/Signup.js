@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
@@ -41,15 +41,18 @@ twitter:{
 }
   }));
 
-function RegisterPopup() {
+function Signup() {
+    const [username, setUsername] = useState([])
+    const [password, setPassword] = useState([])
     const history = useHistory();
     const classes = useStyles();
+
+    
     return (
         <Grid alignItems='center' justify="center" container  className={classes.container}>
             <form className={classes.form}>
             <TwitterIcon className={classes.twitter}  fontSize='large'/>
             <TextField className={classes.textField} id="username" label="Username" variant="outlined" />
-            <TextField className={classes.textField} id="email" label="Email" variant="outlined" />
             <TextField className={classes.textField} id="password" label="Password" variant="outlined" />
             <Button className={classes.btn} color='primary' variant='contained'>SIGN UP</Button>
             </form>
@@ -57,4 +60,4 @@ function RegisterPopup() {
     )
 }
 
-export default RegisterPopup
+export default Signup

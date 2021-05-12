@@ -1,11 +1,7 @@
 
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
-
-import Register from './pages/Register';
-import RegisterPopup from './components/RegisterPopup';
-import Signin from './pages/Signin';
+import Application from './components/Application';
+import UserProvider from "./providers/UserProvider";
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -20,22 +16,10 @@ const theme = createMuiTheme({
 function App() {
   return (
     <div>
-        <ThemeProvider theme={theme}>
-
-    <BrowserRouter>
-        <Switch>
-        <Route exact path="/register">
-          <Register />
-        </Route>
-        {/* Registeration popup */}
-        <Route path="/register/flow">
-          <RegisterPopup/>
-        </Route>
-        <Route path="/login">
-          <Signin/>
-        </Route>
-        </Switch>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+    <UserProvider>
+    <Application/>
+    </UserProvider>
     </ThemeProvider>
     </div>
   );
